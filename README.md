@@ -11,7 +11,7 @@ SQLite: Included with the project
 
 ## Project Structure
 BookManagementFrontend: Angular frontend project\
-BookManagementSystem: ASP.NET Core backend project
+BookAPI: ASP.NET Core backend project
 
 ## Running the Project with Docker
 ### Docker Setup
