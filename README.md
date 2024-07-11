@@ -11,11 +11,11 @@ SQLite: Included with the project
 
 ## Project Structure
 BookManagementFrontend: Angular frontend project
-BookManagementSystem: ASP.NET Core backend projec
+BookManagementSystem: ASP.NET Core backend project
 
 ## Running the Project with Docker
 ### Docker Setup
-Ensure Docker is running on your system.
+Ensure Docker is running.
 
 Navigate to the project root directory, then build and run the Docker containers:
 ```
