@@ -1,0 +1,27 @@
+<div class="book-list">
+    <h2>Book List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Publication Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+          <td>{{ book.publicationYear }}</td>
+          <td>
+            <button (click)="deleteBook(book.id)">Delete</button>
+            <button class="update-button" routerLink="/book-update/{{book.id}}">Update</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

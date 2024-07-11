@@ -1,0 +1,67 @@
+<div class="book-add">
+    <h2>Add a New Book</h2>
+    <form (ngSubmit)="addBook()" #bookForm="ngForm">
+      <div>
+        <label>Title:</label>
+        <input
+          type="text"
+          [(ngModel)]="book.title"
+          name="title"
+          required
+          #title="ngModel"
+        />
+        <div *ngIf="title.invalid && (title.dirty || title.touched)">
+          <div *ngIf="title.errors?.['required']">Title is required.</div>
+        </div>
+      </div>
+      
+      <div>
+        <label>Author:</label>
+        <input
+          type="text"
+          [(ngModel)]="book.author"
+          name="author"
+          required
+          #author="ngModel"
+        />
+        <div *ngIf="author.invalid && (author.dirty || author.touched)">
+          <div *ngIf="author.errors?.['required']">Author is required.</div>
+        </div>
+      </div>
+  
+      <div>
+        <label>Genre:</label>
+        <input
+          type="text"
+          [(ngModel)]="book.genre"
+          name="genre"
+          required
+          #genre="ngModel"
+        />
+        <div *ngIf="genre.invalid && (genre.dirty || genre.touched)">
+          <div *ngIf="genre.errors?.['required']">Genre is required.</div>
+        </div>
+      </div>
+  
+      <div>
+        <label>Publication Year:</label>
+        <input
+          type="number"
+          [(ngModel)]="book.publicationYear"
+          name="publicationYear"
+          required
+          min="1500"
+          max="2024"
+          #publicationYear="ngModel"
+        />
+        <div *ngIf="publicationYear.invalid && (publicationYear.dirty || publicationYear.touched)">
+          <div *ngIf="publicationYear.errors?.['required']">Publication Year is required.</div>
+          <div *ngIf="publicationYear.errors?.['min']">Publication Year cannot be before 1500.</div>
+          <div *ngIf="publicationYear.errors?.['max']">Publication Year cannot be after 2024.</div>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="bookForm.invalid">Add Book</button>
+    </form>
+  </div>
+  
