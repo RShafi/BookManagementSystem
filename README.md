@@ -17,7 +17,13 @@ BookAPI: ASP.NET Core backend project
 ### Docker Setup
 Ensure Docker is running.
 
-Navigate to the project root directory, then build and run the Docker containers:\
+Navigate to the BookAPI (backend) directory and run the following script:\
+```
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+Navigate back to the project root directory, then build and run the Docker containers:\
 ```
 cd <repository-directory>
 docker-compose up --build
