@@ -13,9 +13,12 @@ SQLite: Included with the project
 BookManagementFrontend: Angular frontend project\
 BookAPI: ASP.NET Core backend project
 
-## Running the Project with Docker
-### Docker Setup
-Ensure Docker is running.
+## SQLite Database Creation
+Ensure Entity Framework Core tools are installed:\
+```
+dotnet tool install --global dotnet-ef
+dotnet ef --version
+```
 
 Navigate to the BookAPI (backend) directory and run the following script:\
 ```
@@ -23,7 +26,11 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 
-Navigate back to the project root directory, then build and run the Docker containers:\
+## Running the Project with Docker
+### Docker Setup
+Ensure Docker is running.
+
+Navigate to the project root directory, then build and run the Docker containers:\
 ```
 cd <repository-directory>
 docker-compose up --build
